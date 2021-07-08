@@ -89,15 +89,43 @@
 .ex-9-img:hover{
     transition: 5s;
     border-radius: 50px;
-    filter: drop-shadow(60%) saturate(100%);
     transform: scale(2.5);
+    filter: drop-shadow(30px 10px 4px #4444DD) sepia(50%);
 }
 
 .ex-10-icon {
     font-size: 60px;
 }
+
+.ex-10-icon{
+    animation: trying 4s linear infinite;
+}
+
+@keyframes trying {
+    0% {
+        transform: rotate(10turn);
+    }
+    
+}
+
 .ex-11-icon {
     font-size: 60px;
+}
+
+.ex-11-icon:hover{
+    animation: trying3-4 4s linear ;
+}
+
+@keyframes trying3-4 {
+    0%{
+        transform: rotate(0);
+    }
+    75%{
+        transform: rotate(300deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
 }
 .ex-12-button, .ex-13-button {
     position: relative;
@@ -112,6 +140,26 @@
     text-align: center;
     text-decoration: none;
 }
+
+
+.ex-12-button:hover .ex-12-bottom-white {
+    animation: Bottom 4s infinite;
+}
+
+@keyframes Bottom {
+    0% {
+        right: 20%;
+    }
+    50% {
+        right: calc(100% - 60px);
+    }
+    100% {
+        right: 20%;
+    }
+}
+
+
+
 .ex-12-top-white, .ex-13-top-white {
     position: absolute;
     top: -10px;
